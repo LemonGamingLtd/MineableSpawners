@@ -6,6 +6,7 @@ import com.dnyferguson.mineablespawners.utils.Chat;
 import de.tr7zw.changeme.nbtapi.NBTItem;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -28,6 +29,8 @@ public class SpawnerExplodeListener implements Listener {
         if (!plugin.getConfigurationHandler().getBoolean("explode", "drop")) {
             return;
         }
+
+        if (e.getEntityType() == EntityType.WIND_CHARGE || e.getEntityType() == EntityType.BREEZE_WIND_CHARGE) return;
 
         if (e.getLocation().getWorld() != null && plugin.getConfigurationHandler().getList("explode", "blacklisted-worlds").contains(e.getLocation().getWorld().getName())) {
             return;
