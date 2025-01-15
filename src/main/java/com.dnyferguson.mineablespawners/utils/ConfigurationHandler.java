@@ -248,6 +248,7 @@ public class ConfigurationHandler {
         msgs.put("inventory-full", section.getString("messages.inventory-full"));
         msgs.put("success", section.getString("messages.success"));
         msgs.put("received", section.getString("messages.received"));
+        msgs.put("receivedFloor", section.getString("messages.receivedFloor"));
 
         bools.put("require-permission", section.getBoolean("require-permission"));
         bools.put("drop-if-full", section.getBoolean("drop-if-full"));

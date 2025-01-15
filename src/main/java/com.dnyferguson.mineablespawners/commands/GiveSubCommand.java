@@ -70,12 +70,19 @@ public class GiveSubCommand {
 
             plugin.getLogger().log(Level.INFO, "Dropped " + amount + "x " + mobFormatted + " Spawners at " + targetPlayer.getName() + "'s feet since their inventory was full!");
             targetPlayer.getWorld().dropItemNaturally(targetPlayer.getLocation(), item);
+            targetPlayer.sendMessage(plugin.getConfigurationHandler().getMessage("give", "receivedFloor").replace("%mob%", mobFormatted).replace("%target%", targetPlayer.getName()).replace("%amount%", amount + ""));
 
             return;
         }
 
         targetPlayer.getInventory().addItem(item);
-        plugin.getConfigurationHandler().getMessage("give", "success").replace("%mob%", mobFormatted).replace("%target%", targetPlayer.getName()).replace("%amount%", amount + "");
         targetPlayer.sendMessage(plugin.getConfigurationHandler().getMessage("give", "received").replace("%mob%", mobFormatted).replace("%target%", targetPlayer.getName()).replace("%amount%", amount + ""));
+
+        plugin.getConfigurationHandler().getMessage("give", "success").replace("%mob%", mobFormatted).replace("%target%", targetPlayer.getName()).replace("%amount%", amount + "");
+        sender.sendMessage(plugin.getConfigurationHandler().getMessage("give", "success")
+            .replace("%mob%", mobFormatted)
+            .replace("%target%", targetPlayer.getName())
+            .replace("%amount%", amount + ""));
+        
     }
 }
