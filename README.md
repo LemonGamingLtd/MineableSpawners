@@ -1,10 +1,14 @@
-<p>
-  <img src="https://img.shields.io/bstats/players/7354">
-  <img src="https://img.shields.io/bstats/servers/7354">
-</p>
-
 # Unmaintained
-I haven't touched this in a while as I've been mostly out of the MC scene. It should continue to work fine on servers that are still on the supported MC versions (1.8 1.9 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19) but I won't make any guarantees. Thanks for using something I've created, I'm glad it helped out people at a time where alternatives were not as good.
+
+This project is no longer being maintained as I do not have the time. Available alternatives:
+
+1. Go back to the [original silkspawners plugin](https://www.spigotmc.org/resources/silkspawners-%E2%98%85-ready-to-rock-1-8-8-1-21-7-supported-%E2%98%85.7811/) , according to [this update](https://www.spigotmc.org/resources/silkspawners-%E2%98%85-ready-to-rock-1-8-8-1-21-7-supported-%E2%98%85.7811/update?update=577254) it supports MineableSpawners NBT tags so might be a drop-in replacement (test first obviously)
+
+2. Use the available releases in [JHarris12345's repository](https://github.com/JHarris12345/MineableSpawners) who appears to have been maintaining his own version for his successful server!
+
+3. If you don't plan on updating server versions soon, keep using what works!
+
+Thank you for using something I gave back to the community all those years ago :)
 
 # MineableSpawners
 This plugin allows players to mine and drop spawners, receive them via command and more!​
